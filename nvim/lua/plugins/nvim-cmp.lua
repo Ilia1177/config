@@ -19,9 +19,7 @@ return {
   },
   config = function()
     local cmp = require("cmp")
-
     local luasnip = require("luasnip")
-
     local lspkind = require("lspkind")
 
     -- chargement des snippets (e.g. friendly-snippets)
@@ -48,10 +46,11 @@ return {
 
       -- sources pour l'autocompletion
       sources = cmp.config.sources({
+		{ name = "nvim_lsp" },
         { name = "nvim_lua" },
         { name = "luasnip" }, -- snippets
         { name = "buffer" }, -- texte du buffer courant
-        { name = "path" }, -- chemins dy système de fichier
+        { name = "path" }, -- chemins du système de fichier
         { name = "emoji" }, -- emojis
       }),
 
@@ -64,6 +63,7 @@ return {
           mode = "symbol_text",
           -- On suffixe chaque entrée par son type
           menu = {
+			nvim_lsp = "[LSP]",
             buffer = "[Buffer]",
             luasnip = "[LuaSnip]",
             nvim_lua = "[Lua]",

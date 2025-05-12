@@ -3,9 +3,16 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   version = "*",
   opts = {
-    options = {
-      separator_style = "slant",
-      offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
-    },
+		options = {
+            mode = "tabs", -- "buffers" or set to "tabs" to only show tabpages instead
+            themable = false, -- allows highlight groups to be overriden i.e. sets highlights as default
+			hover = {
+				enabled = true,
+				delay = 200,
+				reveal = {'close'}
+			},
+			separator_style = "thin",
+			offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
+	},
   },
 }

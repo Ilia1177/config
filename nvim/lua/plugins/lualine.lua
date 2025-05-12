@@ -9,7 +9,7 @@ return {
     lualine.setup({
       options = {
         icons_enabled = true,
-        theme = "auto",
+        theme = "gruvbox",
         component_separators = { left = "", right = "" },
         section_separators = { left = "", right = "" },
         disabled_filetypes = {
@@ -33,7 +33,7 @@ return {
           {
             lazy_status.updates,
             cond = lazy_status.has_updates,
-            color = { fg = "#ff9e64" },
+            color = { fg = "#ffe9e916" },
           },
           { "encoding" },
           { "fileformat" },

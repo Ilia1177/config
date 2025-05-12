@@ -32,32 +32,7 @@ return {
     telescope.load_extension("fzf")
 
     -- set keymaps
-    local keymap = vim.keymap -- for conciseness
 
-    keymap.set(
-      "n",
-      "<leader>ff",
-      "<cmd>Telescope find_files<cr>",
-      { desc = "Recherche de chaînes de caractères dans les noms de fichiers" }
-    )
-    keymap.set(
-      "n",
-      "<leader>fg",
-      "<cmd>Telescope live_grep<cr>",
-      { desc = "Recherche de chaînes de caractères dans le contenu des fichiers" }
-    )
-    keymap.set(
-      "n",
-      "<leader>fb",
-      "<cmd>Telescope buffers<cr>",
-      { desc = "Recherche de chaînes de caractères dans les noms de buffers" }
-    )
-    keymap.set(
-      "n",
-      "<leader>fx",
-      "<cmd>Telescope grep_string<cr>",
-      { desc = "Recherche de la chaîne de caractères sous le curseur" }
-    )
   end,
 }
 
