@@ -11,9 +11,13 @@ keymap("i", ";;", "<ESC>", { desc = "Sortir du mode insertion avec ;;" })
 keymap("n", "<leader>nh", ":nohl<CR>", { desc = "Effacer le surlignage de la recherche" })
 
 -- J déplace le texte sélectionné vers le haut en mode visuel (activé avec v)
-keymap("v", "<S-j>", ":m .-2<CR>==", { desc = "Déplace le texte sélectionné vers le haut en mode visuel" })
+keymap("v", "<M-k>", ":m .-2<CR>==", { desc = "Déplace le texte sélectionné vers le haut en mode visuel" })
 -- K déplace le texte sélectionné vers le bas en mode visuel (activé avec v)
-keymap("v", "<S-k>", ":m .+1<CR>==", { desc = "Déplace le texte sélectionné vers le bas en mode visuel" })
+keymap("v", "<M-j>", ":m .+1<CR>==", { desc = "Déplace le texte sélectionné vers le bas en mode visuel" })
+-- I déplace le texte sélectionné vers le haut en mode visuel bloc (activé avec V)
+keymap("x", "<M-k>", ":move '<-2<CR>gv-gv", { desc = "Déplace le texte sélectionné vers le haut en mode visuel bloc" })
+-- K déplace le texte sélectionné vers le bas en mode visuel (activé avec V)
+keymap("x", "<M-j>", ":move '>+1<CR>gv-gv", { desc = "Déplace le texte sélectionné vers le bas en mode visuel bloc" })
 
 -- Changement de fenêtre avec Ctrl + déplacement uniquement au lieu de Ctrl-w + déplacement
 keymap("n", "<C-h>", "<C-w>h", { desc = "Déplace le curseur dans la fenêtre de gauche" })

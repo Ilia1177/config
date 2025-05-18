@@ -5,7 +5,7 @@ return {
   opts = {
 		options = {
             mode = "tabs", -- "buffers" or set to "tabs" to only show tabpages instead
-            themable = false, -- allows highlight groups to be overriden i.e. sets highlights as default
+            themable = true, -- allows highlight groups to be overriden i.e. sets highlights as default
 			hover = {
 				enabled = true,
 				delay = 200,

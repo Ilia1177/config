@@ -49,7 +49,7 @@ return {
         "elmls",
         "graphql",
         "html",
-        "lua_ls",
+ --       "lua_ls",
         "pylsp",
         "ruff",
         "rust_analyzer",
