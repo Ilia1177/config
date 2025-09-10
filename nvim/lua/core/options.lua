@@ -44,3 +44,14 @@ opt.iskeyword:append("-") -- on traite les mots avec des - comme un seul mot
 opt.list = true
 opt.listchars:append({ nbsp = "␣", trail = "•", precedes = "«", extends = "»", tab = "> " })
 
+opt.wrap = true           -- Enable line wrapping
+opt.linebreak = true      -- Wrap at word boundaries (prevents splitting words)
+opt.breakindent = true    -- Indent wrapped lines visually
+
+
+ -- opt.foldmethod = "expr" -- NOT WORKIN
+
+ -- opt.foldexpr = "nvim_treesitter#foldexpr()" -- NOT WORKINK --
+opt.foldmethod = "syntax"
+opt.foldenable = false       -- Start with folds open
+opt.foldlevel = 99           -- Show all folds by default

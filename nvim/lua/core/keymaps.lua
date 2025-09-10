@@ -50,3 +50,10 @@ keymap(
   "<cmd>Telescope grep_string<cr>",
   { desc = "Recherche de la chaîne de caractères sous le curseur" }
 )
+
+keymap(
+	"n", 
+	"<leader>tw", 
+	function() vim.wo.wrap = not vim.wo.wrap end, 
+	{ desc = "Toggle line wrap" }
+)

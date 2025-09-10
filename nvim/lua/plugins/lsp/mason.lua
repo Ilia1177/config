@@ -27,18 +27,7 @@ return {
     })
 
     mason_lspconfig.setup({
-		lua_ls = function()
-          lspconfig.lua_ls.setup({
-            settings = {
-              Lua = {
-                diagnostics = {
-                  -- Force le LSP à reconnaître la variable globale `vim`
-                  globals = { "vim" },
-                },
-              },
-            },
-          })
-        end,
+
       -- Liste des serveurs à installer par défaut
       -- List des serveurs possibles : https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
       -- Vous pouvez ne pas en mettre ici et tout installer en utilisant :Mason
@@ -49,13 +38,13 @@ return {
         "elmls",
         "graphql",
         "html",
- --       "lua_ls",
+        "lua_ls",
         "pylsp",
         "ruff",
         "rust_analyzer",
         "sqlls",
         "svelte",
-        "tsserver",
+--        "tsserver", !!! not working ????
         "yamlls",
       },
       handlers = {
@@ -77,6 +66,18 @@ return {
         -- le premier est la clé utilisée par mason_lspconfig, le deuxième est celle utilisée par lspconfig (ce sont les mêmes)
         -- ils correspondent aux entrées du ensure_installed
 
+		lua_ls = function()
+          lspconfig.lua_ls.setup({
+            settings = {
+              Lua = {
+                diagnostics = {
+                  -- Force le LSP à reconnaître la variable globale `vim`
+                  globals = { "vim" },
+                },
+              },
+            },
+          })
+        end,
         -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#pylsp
         pylsp = function()
           lspconfig.pylsp.setup({
